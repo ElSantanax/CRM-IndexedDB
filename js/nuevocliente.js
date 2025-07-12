@@ -54,6 +54,10 @@
 
             divMensaje.textContent = mensaje;
             formulario.appendChild(divMensaje);
+
+            setTimeout(() => {
+                divMensaje.remove();
+            }, 3000);
         }
     }
 })();
