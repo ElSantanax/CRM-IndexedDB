@@ -67,7 +67,7 @@
             window.location.href = 'index.html';
         }, 3000);
     }
-
+ 
     function imprimirAlerta(mensaje, tipo) {
         // Crear Alerta
         const alerta = document.querySelector('.alerta');
