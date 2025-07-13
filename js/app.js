@@ -23,7 +23,6 @@
         // 200
         crearDB.onsuccess = function () {
             DB = crearDB.result;
-            console.log('Creado correctamente');
         }
 
         // Definir las columnas
@@ -61,8 +60,6 @@
                 const cursor = e.target.result;
 
                 if (cursor) {
-                    console.log(cursor.value);
-
                     const { nombre, email, telefono, empresa, id } = cursor.value;
                     const listadoCliente = document.querySelector('#listado-clientes');
 
