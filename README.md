@@ -211,5 +211,7 @@ CRMIndexedDB/
 - **Performance**: Operaciones rápidas sin latencia de red
 
 ---
+<img width="1920" height="927" alt="CapturePage(1)" src="https://github.com/user-attachments/assets/d103ee7b-74bb-4db1-8b09-6bc12cec21b2" />
+<img width="1920" height="927" alt="CapturePage" src="https://github.com/user-attachments/assets/715f31c2-be01-4725-a60e-e5096c779727" />
 
 **Desarrollado con ❤️ usando tecnologías web modernas** 
