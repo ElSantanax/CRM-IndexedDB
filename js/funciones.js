@@ -4,12 +4,12 @@ function conectarDB() {
 
     // 400
     abrirConexion.onerror = function () {
-        console.log('Hubo un error al conectace con la base de datos ');
+        console.log('Hubo un error al conectarse con la base de datos ');
     }
 
     // 200
     abrirConexion.onsuccess = function () {
-        DB = abrirConexion.result;
+        window.DB = abrirConexion.result;
     }
 }
 
@@ -28,7 +28,11 @@ function imprimirAlerta(mensaje, tipo) {
         }
 
         divMensaje.textContent = mensaje;
-        formulario.appendChild(divMensaje);
+        
+        const formulario = document.querySelector('#formulario');
+        if (formulario) {
+            formulario.appendChild(divMensaje);
+        }
 
         setTimeout(() => {
             divMensaje.remove();

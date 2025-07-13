@@ -43,7 +43,7 @@
             id: Number(idCliente)
         }
 
-        const transaction = DB.transaction(['crm'], 'readwrite');
+        const transaction = window.DB.transaction(['crm'], 'readwrite');
         const objectStore = transaction.objectStore('crm');
 
         objectStore.put(clienteActualizado);
@@ -62,7 +62,7 @@
     }
 
     function obtenerCliente(id) {
-        const transaction = DB.transaction(['crm'], 'readwrite');
+        const transaction = window.DB.transaction(['crm'], 'readonly');
         const objectStore = transaction.objectStore('crm');
 
         const cliente = objectStore.openCursor();
@@ -93,12 +93,12 @@
 
         // 400
         abrirConexion.onerror = function () {
-            console.log('Hubo un error al conectace con la base de datos ');
+            console.log('Hubo un error al conectarse con la base de datos ');
         }
 
         // 200
         abrirConexion.onsuccess = function () {
-            DB = abrirConexion.result;
+            window.DB = abrirConexion.result;
         }
     }
 })();
